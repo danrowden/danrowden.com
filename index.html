@@ -1,28 +1,118 @@
-<html>
+<html lang="en">
 	<head>
-		<title>Dan Rowden — Website maker, magazine reader</title>
-
+		<title>Dan Rowden - Designer and developer</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+		<meta name="description" content="Dan Rowden is a web designer and developer, and magazine reader. Available for hire on small and medium projects.">
+		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,900' rel='stylesheet' type='text/css'>
 		<style>
-		body {
-			font-family: "Helvetica Neue";
-			font-size: 16px;
-			color: #777;
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
 		}
-		h1, h2, h3, h4 {font-weight: normal;margin: 0.25em 0;line-height: 1em;}
-		a:link, a:visited {color: #000;border-bottom: 2px solid #ddd;text-decoration: none;}
-		a:hover {color: #999;}
 
-		p {margin-top: 3em;}
-		img {
-			display: block;
-			max-width: 100%;
-			margin: 1em 0;
+		body {
+			font-family: Roboto, "Helvetica Neue", sans-serif;
+			font-size: 14px;
+			color: #222;
+			background-color: #fff;
 		}
-		@media (min-width: 501px) {
-			img {
-				float: left;
-				width: auto;
-				margin: 0 1em 1em 0;
+
+		h1, 
+		h2, 
+		h3, 
+		h4 {
+			font-weight: normal;
+			margin: 1.5em 0;
+			line-height: 1.4;
+		}
+		p {
+			line-height: 1.5;
+		}
+		a:link, 
+		a:visited {
+			color: #000;
+			border-bottom: 2px solid #ccc;
+			text-decoration: none;
+			transition: color 0.1s ease-in-out;
+		}
+		a:hover {
+			color: #999;
+		}
+
+		header {
+			padding: 6em 3em 1em;
+			text-align: center;
+		}
+		header img {
+			width: 150px;
+		}
+		header h1 {
+			font-family: 'Playfair Display', serif;
+			font-weight: 700;
+			font-size: 3em;
+		}
+
+		.intro {
+			padding: 1em 3em 3em;
+			text-align: center;
+		}
+		.intro hr {
+			margin: 0 auto 4em;
+			width: 200px;
+			border: 0;
+			border-top: 1px solid #ccc;
+		}
+		.intro h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2em;
+		}
+
+		.content {
+			padding: 1em 0;
+			overflow: hidden;
+			background-color: #eaf1f4;
+		}
+		.content .work {
+			display: block;
+			margin: 0 auto;
+			padding: 2em;
+			max-width: 600px;
+			text-align: center;
+		}
+		.content .work img {
+			display: block;
+			width: 100%;
+			margin: 0 auto 1em;
+		}
+
+		footer {
+			padding: 3em;
+			text-align: center;
+		}
+
+		@media (min-width: 700px) {
+			body {
+				font-size: 16px;
+			}
+
+			header {
+				padding-top: 10em;
+			}
+			header h1 {
+				margin: 1em 0;
+				font-size: 4em;
+			}
+		}
+
+		@media (min-width: 900px) {
+			.content {
+				padding: 1.5em 0;
+			}
+			.content .work {
+				padding: 2em 3em;
+				max-width: 700px;
 			}
 		}
 		</style>
@@ -30,23 +120,53 @@
 
 	<body>
 
-		<h1>Dan Rowden</h1>
-		<h2>I make websites and read magazines, mostly</h2>
-		<h3>Creator of <a href="http://magpile.com" target="_blank">Magpile</a>, host of <a href="http://magheroes.net" target="_blank">Mag Heroes</a>, developer at <a href="http://pickcrew.com" target="_blank">Crew</a></h3>
-		<h4><a href="http://twitter.com/dr">@dr</a>&mdash;<a href="http://journal.danrowden.com">Blog</a>&mdash;<a href="http://magpile.com/@dr/">Magazines</a></h4>
+		<header>
+			<img src="images/dan-rowden.jpg" alt="Hi">
+			<h1>Dan Rowden</h1>
+		</header>
 
-		<p>
-			<img src="images/dan-rowden.jpg" style="width:200px" alt="Hi">
+		<div class="intro">
+			<hr>
+			<h2>I make websites and read magazines, mostly.</h2>
+			<h3>Freelance designer &amp; developer. Creator of <a href="http://magpile.com" target="_blank">Magpile</a>, host of <a href="http://magheroes.net" target="_blank">Mag Heroes</a>.</h3>
+			<p>Say hi. <a href="http://twitter.com/dr">@dr</a></p>
+		</div>
 
-			<a href="http://magheroes.net" target="_blank" title="Mag Heroes podcast, in which I chat with some of the world's best magazine makers"><img src="images/mag-heroes.jpg" style="width:500px" alt="Mag Heroes"></a>
+		<div class="content">
+			<div class="work">
+				<a href="http://magpile.com" target="_blank" title="Magpile, the world's biggest online reference to magazines">
+					<img src="images/magpile.jpg" alt="Magpile">
+					My wiki-like magazine data platform and marketplace for publishers
+				</a>
+			</div>
 
-			<a href="http://pickcrew.com" target="_blank" title="Crew, 'Big Bertha' release (January '14). Huge update featuring acitivity feed and SMS notifications built by me"><img src="images/crew-bertha.jpg" style="width:300px" alt="Crew, 'Big Bertha' release"></a>
+			<div class="work">
+				<a href="http://magheroes.net" target="_blank" title="Mag Heroes podcast, in which I chat with some of the world's best magazine makers">
+					<img src="images/mag-heroes.jpg" alt="Mag Heroes">
+					I talk with magazine makers on my podcast. Season 3 coming soon!
+				</a>
+			</div>
 
-			<a href="http://hellomrmag.com" target="_blank" title="Hello Mr: custom publishing platform (designed by Editor, Ryan Fitzgibbon)"><img src="images/hello-mr.jpg" style="width:500px" alt="Hello Mr"></a>
+			<div class="work">
+				<a href="http://hellomrmag.com" target="_blank" title="Hello Mr: custom publishing platform (designed by Editor, Ryan Fitzgibbon)">
+					<img src="images/hello-mr.jpg" alt="Hello Mr">
+					A custom publishing platform for NYC-based mag, Hello Mr.
+				</a>
+			</div>
 
-			<a href="http://magpile.com/awards/" target="_blank" title="Magpile Magazine Awards 2014, logo mark"><img src="images/magpile-2014-awards.jpg" style="width:300px" alt="Magpile Magazine Awards 2014"></a>
-		</p>
+			<div class="work">
+				<a href="http://magpile.com/awards/" target="_blank" title="Magpile Magazine Awards 2014, logo mark">
+					<img src="images/magpile-2014-awards.jpg" alt="Magpile Magazine Awards 2014" style="max-width: 60%;">
+					The logo mark for Magpile's annual magazine awards ceremony
+				</a>
+			</div>
+		</div>
 
+		<footer>
+			<p>I am available for hire for small and medium web projects.</p>
+
+			<p><a href="mailto:hello@danrowden.com" title="Email me">Email me</a></p>
+		</footer>
 	</body>
 
 </html>
