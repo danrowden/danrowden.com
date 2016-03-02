@@ -17,6 +17,7 @@
 			font-size: 14px;
 			color: #222;
 			background-color: #fff;
+			text-align: center;
 		}
 
 		h1, 
@@ -24,7 +25,7 @@
 		h3, 
 		h4 {
 			font-weight: normal;
-			margin: 1.5em 0;
+			margin: 1.5rem 0;
 			line-height: 1.4;
 		}
 		p {
@@ -41,6 +42,21 @@
 			color: #999;
 		}
 
+		h2 {
+			font-family: 'Playfair Display', serif;
+		}
+		h2.title {
+			font-weight: 700;
+			font-size: 2rem;
+		}
+
+		hr.narrow {
+			margin: 2rem auto;
+			width: 200px;
+			border: 0;
+			border-top: 1px solid #ccc;
+		}
+
 		header {
 			padding: 6em 3em 1em;
 			text-align: center;
@@ -51,22 +67,25 @@
 		header h1 {
 			font-family: 'Playfair Display', serif;
 			font-weight: 700;
-			font-size: 3em;
+			font-size: 3rem;
 		}
 
 		.intro {
-			padding: 1em 3em 3em;
-			text-align: center;
-		}
-		.intro hr {
-			margin: 0 auto 4em;
-			width: 200px;
-			border: 0;
-			border-top: 1px solid #ccc;
+			padding: 1rem 3rem 3rem;
 		}
 		.intro h2 {
 			font-family: 'Playfair Display', serif;
 			font-size: 2em;
+		}
+
+		.projects {
+			padding: 1rem 1rem 5rem;
+		}
+		.projects ul {
+			list-style: none;
+		}
+		.projects li {
+			padding: 0.5rem 0;
 		}
 
 		.content {
@@ -77,18 +96,20 @@
 		.content .work {
 			display: block;
 			margin: 0 auto;
-			padding: 2em;
+			padding: 3rem 2rem;
 			max-width: 600px;
-			text-align: center;
 		}
 		.content .work img {
 			display: block;
 			width: 100%;
-			margin: 0 auto 1em;
+			margin: 0 auto 1rem;
+		}
+		.content .work a {
+			border-bottom: none;
 		}
 
 		footer {
-			padding: 3em;
+			padding: 5rem 2rem;
 			text-align: center;
 		}
 
@@ -98,20 +119,26 @@
 			}
 
 			header {
-				padding-top: 10em;
+				padding-top: 10rem;
 			}
 			header h1 {
-				margin: 1em 0;
-				font-size: 4em;
+				margin: 1rem 0;
+				font-size: 4rem;
+			}
+
+			.content .work {
+				padding: 4rem;
+			}
+			.content .work img {
+				margin-bottom: 2rem;
 			}
 		}
 
 		@media (min-width: 900px) {
 			.content {
-				padding: 1.5em 0;
+				padding: 3rem 0 2rem;
 			}
 			.content .work {
-				padding: 2em 3em;
 				max-width: 700px;
 			}
 		}
@@ -124,15 +151,32 @@
 			<img src="images/dan-rowden.jpg" alt="Hi">
 			<h1>Dan Rowden</h1>
 		</header>
+		
+		<hr class="narrow">
 
 		<div class="intro">
-			<hr>
 			<h2>I make websites and read magazines, mostly.</h2>
 			<h3>Freelance designer &amp; developer. Creator of <a href="http://magpile.com" target="_blank">Magpile</a>, host of <a href="http://magheroes.net" target="_blank">Mag Heroes</a>.</h3>
-			<p>Say hi. <a href="http://twitter.com/dr">@dr</a></p>
+			<p>Say hi! DM me <a href="http://twitter.com/dr">@dr</a> or <a href="mailto:hello@danrowden.com" title="Email me">send an email</a></p>
+		</div>
+		
+		<hr class="narrow">
+
+		<div class="projects">
+			<h2 class="title">Current projects</h2>
+
+			<ul>
+				<li><a href="http://magpile.com" target="_blank">Magpile</a> &mdash; recording magazine history</li>
+				<li><a href="http://magpile.com/store/" target="_blank">Magpile Store</a> &mdash; magazine marketplace</li>
+				<li><a href="http://magheroes.het" target="_blank">Mag Heroes</a> &mdash; podcast about magazine makers</li>
+				<li><a href="https://instagram.com/dansmags" target="_blank">@dansmags</a> &mdash; the mags I read</li>
+				<li><a href="https://instagram.com/coffeeinmauritius" target="_blank">@coffeeinmauritius</a> &mdash; exploring coffee and caf&eacute;s in Mauritius</li>
+			</ul>
 		</div>
 
 		<div class="content">
+			<h2 class="title">Select previous work</h2>
+
 			<div class="work">
 				<a href="http://love.hellomrmag.com" target="_blank" title="Hello Mr: Hello Love blog">
 					<img src="images/hello-love.jpg" alt="Hello Love">
@@ -193,7 +237,7 @@
 		<footer>
 			<p>I am available for hire for small and medium web projects.</p>
 
-			<p><a href="mailto:hello@danrowden.com" title="Email me">Email me</a></p>
+			<p><a href="mailto:hello@danrowden.com" title="Email me">Email me</a>!</p>
 		</footer>
 	</body>
 
