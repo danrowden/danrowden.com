@@ -13,6 +13,6 @@ def prod():
 def deploy():
     rsync_project(
         remote_dir = remote_dir,
-        local_dir = "",
-        exclude = ("*.DS_Store, README.md, .gitignore, *.sublime-project",),
+        local_dir = ".",
+        exclude = ("*.DS_Store, README.md, .gitignore, *.sublime-project, .git/**",),
     )
