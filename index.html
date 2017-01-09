@@ -1,10 +1,11 @@
 <html lang="en">
 	<head>
-		<title>Dan Rowden - Designer and developer</title>
+		<title>Dan Rowden - Designer, developer, entrepreneur</title>
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<meta name="description" content="Dan Rowden is a web designer and developer, and magazine reader. Available for hire on small and medium projects.">
-		<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto:400,900' rel='stylesheet' type='text/css'>
+		<meta name="description" content="Dan Rowden is a web designer and developer, coach, entrepreneur and magazine reader.">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+		<script>try{Typekit.load({ async: true });}catch(e){}</script>
 		<style>
 		* {
 			padding: 0;
@@ -13,224 +14,270 @@
 		}
 
 		body {
-			font-family: Roboto, "Helvetica Neue", sans-serif;
-			font-size: 14px;
+			font-family: 'Acumin Pro', 'Roboto', "Helvetica Neue", sans-serif;
+			font-size: 16px;
+			line-height: 1.4;
 			color: #222;
 			background-color: #fff;
 			text-align: center;
+			max-width: 500px;
+			margin: auto;
+			padding: 1rem;
+		}
+		@media (min-width: 600px) {
+			body {
+				padding: 0 2rem 2rem;
+				max-width: 860px;
+				text-align: left;
+			}
 		}
 
-		h1, 
-		h2, 
-		h3, 
-		h4 {
+		h1, h2, h3, h4 {
 			font-weight: normal;
-			margin: 1.5rem 0;
-			line-height: 1.4;
 		}
-		p {
-			line-height: 1.5;
-		}
+
+		h1 { font-family: "filson-pro"; }
+
 		a:link, 
 		a:visited {
-			color: #000;
-			border-bottom: 2px solid #ccc;
+			color: inherit;
+			border-bottom: 1px solid;
 			text-decoration: none;
-			transition: color 0.1s ease-in-out;
+			transition: color 0.2s, border 0.2s;
 		}
 		a:hover {
-			color: #999;
+			color: #aaa;
+		}
+		a.button:hover {
+			color: #0086E2;
 		}
 
-		h2 {
-			font-family: 'Playfair Display', serif;
-		}
-		h2.title {
-			font-weight: 700;
-			font-size: 2rem;
-		}
-
-		hr.narrow {
-			margin: 2rem auto;
-			width: 200px;
-			border: 0;
-			border-top: 1px solid #ccc;
-		}
-
-		header {
-			padding: 6em 3em 1em;
-			text-align: center;
-		}
-		header img {
-			width: 150px;
-		}
-		header h1 {
-			font-family: 'Playfair Display', serif;
-			font-weight: 700;
-			font-size: 3rem;
+		.fs14 { font-size: 14px; }
+		.fs20 { font-size: 20px; }
+		.fs30 { font-size: 30px; }
+		.fs36 { font-size: 36px; }
+		.fs40 { font-size: 40px; }
+		.fs60 { font-size: 60px; }
+		@media (max-width: 767px) {
+			.fs20 { font-size: 16px; }
+			.fs30 { font-size: 20px; }
+			.fs36 { font-size: 24px; }
+			.fs40 { font-size: 30px; }
+			.fs60 { font-size: 40px; }
 		}
 
-		.intro {
-			padding: 1rem 3rem 3rem;
-		}
-		.intro h2 {
-			font-family: 'Playfair Display', serif;
-			font-size: 2em;
-		}
+		.grey { color: #BFBFBF; }
 
-		.projects {
-			padding: 1rem 1rem 5rem;
-		}
-		.projects ul {
-			list-style: none;
-		}
-		.projects li {
-			padding: 0.5rem 0;
-		}
+		.normal { font-weight: normal; }
+		.bold { font-weight: bold; }
+		.tc { text-align: center; }
+		.vam { vertical-align: middle; }
 
-		.content {
-			padding: 1em 0;
+		.mb1 { margin-bottom: 1rem; }
+		.mb2 { margin-bottom: 2rem; }
+		.mb4 { margin-bottom: 4rem !important; }
+
+		.list { list-style: none; }
+		.list li { margin-bottom: 1rem; }
+
+		.header {
 			overflow: hidden;
-			background-color: #eaf1f4;
-		}
-		.content .work {
-			display: block;
-			margin: 0 auto;
-			padding: 3rem 2rem;
-			max-width: 600px;
-		}
-		.content .work img {
-			display: block;
-			width: 100%;
-			margin: 0 auto 1rem;
-		}
-		.content .work a {
-			border-bottom: none;
+			margin-bottom: 3rem;
 		}
 
-		footer {
-			padding: 5rem 2rem;
-			text-align: center;
+		.hey {
+			margin-bottom: 1rem;
 		}
-
-		@media (min-width: 700px) {
-			body {
-				font-size: 16px;
+		.name {
+			margin-bottom: 1rem;
+		}
+		.location { 
+			margin-top: 1.5rem;
+			color: #5F5F5F;
+		}
+		@media (min-width: 600px) {
+			.hey {
+				margin-top: 5rem;
+				margin-bottom: 1rem;
 			}
-
-			header {
-				padding-top: 10rem;
-			}
-			header h1 {
-				margin: 1rem 0;
-				font-size: 4rem;
-			}
-
-			.content .work {
-				padding: 4rem;
-			}
-			.content .work img {
+			.name {
 				margin-bottom: 2rem;
 			}
+			.location {
+				margin-top: 1.5rem;
+			}
 		}
 
-		@media (min-width: 900px) {
-			.content {
-				padding: 3rem 0 2rem;
-			}
-			.content .work {
-				max-width: 700px;
+		.photo {
+			width: 100%;
+			margin-bottom: 2rem;
+			max-width: 300px;
+		}
+		@media (min-width: 600px) {
+			.photo {
+				float: left;
+				width: 40%;
+				max-width: none;
+				margin-right: 1rem;
 			}
 		}
+		@media (min-width: 768px) {
+			.photo {
+				margin-right: 2rem;
+			}
+		}
+
+		.pin { 
+			width: 16px; 
+			fill: #5F5F5F;
+			vertical-align: top;
+		}
+
+		.projects { margin-bottom: 3rem; }
+		.project {
+			display: inline-block;
+				vertical-align: top;
+				text-align: center;
+				line-height: 2rem;
+		}
+		.project:first-of-type { display: block; }
+		@media (min-width: 600px) {
+			.projects {
+				margin-left: 2.5%;
+		    margin-right: 2.5%;
+		    text-align: center;
+			}
+			.project {
+				display: inline-block;
+				padding: 3%;
+			}
+			.project:first-of-type { display: inline-block; }
+		}
+
+		.row {
+			margin-top: 1.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.right {
+			margin-top: 1rem;
+			margin-bottom: 2.5rem;
+		}
+		@media (min-width: 600px) {
+			.row { 
+				display: table;
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+			.left {
+				display: table-cell;
+				width: 76%;
+				padding-right: 8%;
+			}
+			.right {
+				display: table-cell;
+				width: 24%;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.other-projects { margin-top: 4rem; }
+		@media (min-width: 600px) {
+			.other-projects { margin-top: 6rem; }
+		}
+
+		.footer {
+			margin-top: 5rem;
+		}
+
+
+
 		</style>
 	</head>
 
 	<body>
 
-		<header>
-			<img src="images/dan-rowden.jpg" alt="Hi">
-			<h1>Dan Rowden</h1>
+		<header class="header">
+			<img src="images/dan-avatar.jpg" alt="Dan Rowden" class="photo">
+			<p class="fs20 hey">Hey, I'm</p>
+			<h1 class="fs60 bold name">Dan Rowden</h1>
+			<h2 class="fs36">I'm a designer, developer and magazine-focused entrepreneur</h2>
+			<p class="fs14 location">
+				<svg class="pin" version="1.1" id="Location_pin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
+					<path d="M10,2.009c-2.762,0-5,2.229-5,4.99c0,4.774,5,11,5,11s5-6.227,5-11C15,4.239,12.762,2.009,10,2.009z M10,9.76
+					c-1.492,0-2.7-1.209-2.7-2.7s1.208-2.7,2.7-2.7c1.49,0,2.699,1.209,2.699,2.7S11.49,9.76,10,9.76z"/>
+				</svg> Mauritius
+			</p>
 		</header>
 		
-		<hr class="narrow">
-
-		<div class="intro">
-			<h2>I make websites and read magazines, mostly.</h2>
-			<h3>Freelance designer &amp; developer. Creator of <a href="http://magpile.com" target="_blank">Magpile</a>, host of <a href="http://magheroes.net" target="_blank">Mag Heroes</a>.</h3>
-			<p>Say hi! DM me <a href="http://twitter.com/dr">@dr</a> or <a href="mailto:hello@danrowden.com" title="Email me">send an email</a></p>
-		</div>
-		
-		<hr class="narrow">
-
 		<div class="projects">
-			<h2 class="title">Side projects</h2>
-
-			<ul>
-				<li><a href="http://magpile.com" target="_blank">Magpile</a> &mdash; recording magazine history</li>
-				<li><a href="http://magpile.com/store/" target="_blank">Magpile Store</a> &mdash; the magazine marketplace</li>
-				<!-- <li><a href="http://magheroes.net" target="_blank">Mag Heroes</a> &mdash; a podcast about magazine makers</li> -->
-				<li><a href="https://instagram.com/dansmags" target="_blank">@dansmags</a> &mdash; the mags I read</li>
-				<li><a href="https://instagram.com/coffeeinmauritius" target="_blank">@coffeeinmauritius</a> &mdash; exploring coffee and caf&eacute;s in Mauritius</li>
-			</ul>
-		</div>
-
-		<div class="content">
-			<h2 class="title">Select previous work</h2>
-
-			<div class="work">
-				<a href="http://fountainmedspa.com" target="_blank" title="Fountain Med Spa">
-					<img src="images/fountain-med-spa.jpg" alt="Fountain Med Spa">
-					Wordpress site built with the Constructor theme.
-				</a>
+			<div class="project fs30">
+				I make
 			</div>
 
-			<div class="work">
-				<a href="http://dailybible.co" target="_blank" title="Daily Bible">
-					<img src="images/daily-bible.jpg" alt="Daily Bible">
-					A new marketing page for a daily verse app, designed to increase app download conversions.
-				</a>
+			<div class="project fs36 bold">
+				<a href="http://magpile.com" target="_blank">Magpile</a>
 			</div>
 
-			<div class="work">
-				<a href="http://magpile.com" target="_blank" title="Magpile, the world's biggest online reference to magazines">
-					<img src="images/magpile.jpg" alt="Magpile">
-					A wiki-like magazine reference site I launched in 2012.
-				</a>
+			<div class="project fs36 bold">
+				<a href="https://subsail.com" target="_blank">Subsail</a><br>
+				<span class="normal fs14 grey">Launching soon!</span>
 			</div>
 
-			<div class="work">
-				<a href="http://magpile.com/store/" target="_blank" title="Magpile Store, a unique marketplace for publishers to sell online">
-					<img src="images/magpile-store.jpg" alt="Magpile Store">
-					An e-commerce platform and marketplace for publishers, selling to customers worldwide.
-				</a>
-			</div>
-
-			<div class="work">
-				<a href="http://magheroes.net" target="_blank" title="Mag Heroes podcast, in which I chat with some of the world's best magazine makers">
-					<img src="images/mag-heroes.jpg" alt="Mag Heroes">
-					I talk with magazine makers on my podcast. Season 3 coming soon!
-				</a>
-			</div>
-
-			<div class="work">
-				<a href="http://hellomrmag.com" target="_blank" title="Hello Mr: custom publishing platform (designed by Editor, Ryan Fitzgibbon)">
-					<img src="images/hello-mr.jpg" alt="Hello Mr">
-					A custom publishing platform for NYC-based mag, Hello Mr.
-				</a>
-			</div>
-
-			<div class="work">
-				<a href="http://magpile.com/awards/" target="_blank" title="Magpile Magazine Awards 2014">
-					<img src="images/magpile-2014-awards.jpg" alt="Magpile Magazine Awards 2014"">
-					Organisation and design for Magpile's annual magazine awards ceremony.
-				</a>
+			<div class="project fs36 bold">
+				<a href="http://magheroes.net" target="_blank">Mag Heroes</a>
 			</div>
 		</div>
 
-		<footer>
-			<p>I am available for hire for small and medium web projects.</p>
+		<div class="row">
+			<div class="left fs30">
+				I freelance as a web application designer and developer, focusing on magazines, online publishing and e-commerce
+			</div>
+			<div class="right fs36 bold vam">
+				<a href="mailto:hire@danrowden.com" class="button">Hire me</a>
+				<br>
+				<span class="normal fs14 grey">via email</span>
+			</div>
+		</div>
 
-			<p><a href="mailto:hello@danrowden.com" title="Email me">Email me</a>!</p>
+		<div class="row">
+			<div class="left fs30">
+				I also coach and advise publishers on marketing and online strategy, aiming to improve reach and sales
+			</div>
+			<div class="right fs36 bold vam">
+				<a href="https://calendly.com/danrowden" target="_blank" class="button">Book me</a>
+				<br>
+				<span class="normal fs14 grey">on Calendly</span>
+			</div>
+		</div>
+
+		<div class="row other-projects">
+			<div class="left">
+
+				<h2 class="fs36 bold mb2" style="line-height: 1">Other projects</h2>
+
+				<ul class="fs20 list">
+					<li>Posts on Medium <a href="https://medium.com/@dr" target="_blank">@dr</a></li>
+					<li>Magazine photos on Instagram <a href="https://www.instagram.com/dansmags/" target="_blank">@dansmags</a></li>
+					<li>Mauritius' coffee scene on Instagram <a href="https://www.instagram.com/coffeeinmauritius/" target="_blank">@coffeeinmauritius</a></li>
+				</ul>
+
+			</div>
+
+			<div class="right">
+				<h3 class="fs20 bold mb2">Follow me</h3>
+
+				<ul class="list">
+					<li>Twitter <a href="https://twitter.com/dr">@dr</a></li>
+					<li>Instagram <a href="https://instagram.com/dr">@dr</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+		<footer class="footer tc fs14">
+			<p class="mb1">Say hi &mdash; <a href="mailto:hello@danrowden.com" title="Email me">hello@danrowden.com</a></p>
+			<p>Designed in Mauritius 2016</p>
 		</footer>
 
 		<script>
