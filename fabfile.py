@@ -4,7 +4,7 @@ from fabric.contrib.project import rsync_project
 # replace username in the next path. Can't use $HOME from python.
 webfaction_user = 'danr'
 webfaction_app = 'danrowden'
-webfaction_server = 'web398'
+webfaction_server = 'web577'
 remote_dir = '/home/{}/webapps/{}/'.format(webfaction_user, webfaction_app)
  
 def prod():
