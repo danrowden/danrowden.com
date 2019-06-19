@@ -1,11 +1,10 @@
 <html lang="en">
 	<head>
-		<title>Dan Rowden - Magazine-focussed developer and entrepreneur</title>
-		<link rel="icon" type="image/png" sizes="32x32" href="images/dan-favicon-32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/dan-favicon-16.png">
+		<title>Dan Rowden - Product builder and entrepreneur</title>
+		<link rel="icon" type="image/png" href="images/favicon.png">
 		<meta name="description" content="Dan Rowden is an English developer and designer, entrepreneur and magazine reader.">
 	  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-		<link href="https://rsms.me/inter/inter-ui.css" rel="stylesheet">
+		<link href="https://rsms.me/inter/inter.css" rel="stylesheet">
 		<style>
 		* {
 			padding: 0;
@@ -14,7 +13,7 @@
 		}
 
 		body {
-			font-family: 'Inter UI', 'Roboto', "Helvetica Neue", sans-serif;
+			font-family: 'Inter', 'Roboto', "Helvetica Neue", sans-serif;
 			font-size: 16px;
 			line-height: 1.3;
 			color: #111;
@@ -34,7 +33,6 @@
 		}
 
 		h1, h2, h3, h4 { line-height: 1.1; }
-		p { color: #7C7C7C; }
 		.black { color: #111 !important; }
 
 		a:link, 
@@ -54,26 +52,28 @@
 
 		.fs14 { font-size: 14px; }
 		.fs20 { font-size: 20px; }
+		.fs24 { font-size: 24px; }
 		.fs30 { font-size: 30px; }
 		.fs36 { font-size: 36px; }
 		.fs40 { font-size: 40px; }
 		.fs60 { font-size: 60px; }
 		@media (max-width: 767px) {
 			.fs20 { font-size: 16px; }
+			.fs24 { font-size: 20px; }
 			.fs30 { font-size: 20px; }
 			.fs36 { font-size: 24px; }
 			.fs40 { font-size: 30px; }
 			.fs60 { font-size: 40px; }
 		}
 
-		.grey { color: #A2A2A2; }
+		.grey, a.grey { color: #A2A2A2; }
 
 		.normal { font-weight: normal; }
 		.bold { font-weight: bold; }
 		.tc { text-align: center; }
 		.tr { text-align: right; }
 		.tl { text-align: left; }
-		.vam { vertical-align: middle; }
+		.v-mid { vertical-align: middle; }
 
 		.mt1 { margin-top: 1rem; }
 		.mt2 { margin-top: 2rem; }
@@ -121,7 +121,6 @@
 				text-align: left;
 			}
 			.title {
-				font-size: 2rem;
 				right: 1rem;
 				left: auto;
 			}
@@ -174,13 +173,9 @@
 		.project {
 			padding: 1rem;
 			vertical-align: top;
-			opacity: 0.8;
-			transition: opacity 0.3s ease-in-out;
 		}
-		.project:hover { opacity: 1; }
 		.project p { 
 			margin-top: 1rem;
-			margin-left: 1rem;
 			line-height: 1.3; 
 		}
 		@media (min-width: 600px) {
@@ -236,65 +231,76 @@
 
 	<body>
 
-		<header class="section section--header">
+		<header class="section section--header flex">
+
 			<div class="photo-container">
 				<img src="images/dan.jpg" alt="Dan Rowden" class="photo">
 				<h1 class="bold name">Dan <span class="br-ss"></span>Rowden</h1>
-				<h2 class="title tr">Web developer &amp;<br>magazine entrepreneur</h2>
+				<h2 class="title tr normal fs24">Product builder<br> &amp; entrepreneur</h2>
 			</div>
 
 			<div class="lists pl1">
-				<ul class="list fs14 grey tl skills">
-					<li>Web developer, product designer</li>
-					<li>Magazine fan</li>
-					<li>Entrepreneur</li>
-				</ul>
 
 				<ul class="list fs14 grey tl location">
-					<li>British &mdash; 32 yrs</li>
+					<li>English</li>
+					<li>32 yrs</li>
 					<li>Mauritius</li>
 				</ul>
 
 				<p class="mt1 fs14">
-					<a href="https://twitter.com/dr" class="b0" target="_blank"><svg style="vertical-align: middle" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
+					<a href="https://twitter.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
 					&nbsp;
-					<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg style="vertical-align:middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dansmags</a>
+					<a href="https://instagram.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dr</a>
 					&nbsp;
-					<a href="https://instagram.com/danrdn" class="b0" target="_blank"><svg style="vertical-align:middle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> danrdn</a>
+					<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dansmags</a>
+					&nbsp;
+					<a href="https://www.linkedin.com/in/danrowden/" class="b0" target="_blank">
+						<svg class="v-mid" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Desktop" transform="translate(-538.000000, -443.000000)" fill="#A2A2A2" fill-rule="nonzero">
+						            <g id="logo-linkedin" transform="translate(538.000000, 443.000000)">
+						                <path d="M15.3333333,0 L0.666666667,0 C0.266666667,0 0,0.266666667 0,0.666666667 L0,15.3333333 C0,15.7333333 0.266666667,16 0.666666667,16 L15.3333333,16 C15.7333333,16 16,15.7333333 16,15.3333333 L16,0.666666667 C16,0.266666667 15.7333333,0 15.3333333,0 Z M4.73333333,13.6666667 L2.4,13.6666667 L2.4,6 L4.8,6 L4.8,13.6666667 L4.73333333,13.6666667 Z M3.53333333,4.93333333 C2.8,4.93333333 2.13333333,4.33333333 2.13333333,3.53333333 C2.13333333,2.8 2.73333333,2.13333333 3.53333333,2.13333333 C4.26666667,2.13333333 4.93333333,2.73333333 4.93333333,3.53333333 C4.93333333,4.33333333 4.33333333,4.93333333 3.53333333,4.93333333 Z M13.6666667,13.6666667 L11.2666667,13.6666667 L11.2666667,9.93333333 C11.2666667,9.06666667 11.2666667,7.93333333 10.0666667,7.93333333 C8.8,7.93333333 8.66666667,8.86666667 8.66666667,9.86666667 L8.66666667,13.6666667 L6.26666667,13.6666667 L6.26666667,6 L8.53333333,6 L8.53333333,7.06666667 L8.53333333,7.06666667 C8.86666667,6.46666667 9.6,5.86666667 10.8,5.86666667 C13.2,5.86666667 13.6666667,7.46666667 13.6666667,9.53333333 L13.6666667,13.6666667 Z" id="Shape"></path>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</a>
+					&nbsp;
+					<a href="https://www.youtube.com/channel/UCWvxwCs9pSGAAni81chXb6w" class="b0" target="_blank">
+						<svg class="v-mid" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Desktop" transform="translate(-565.000000, -445.000000)" fill="#A2A2A2" fill-rule="nonzero">
+						            <g id="logo-youtube" transform="translate(565.000000, 445.000000)">
+						                <path d="M15.8,2.8 C15.6,1.5 15,0.6 13.6,0.4 C11.4,0 8,0 8,0 C8,0 4.6,0 2.4,0.4 C1,0.6 0.3,1.5 0.2,2.8 C0,4.1 0,6 0,6 C0,6 0,7.9 0.2,9.2 C0.4,10.5 1,11.4 2.4,11.6 C4.6,12 8,12 8,12 C8,12 11.4,12 13.6,11.6 C15,11.3 15.6,10.5 15.8,9.2 C16,7.9 16,6 16,6 C16,6 16,4.1 15.8,2.8 Z M6,9 L6,3 L11,6 L6,9 Z" id="Shape"></path>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</a>
 				</p>
 			</div>
 		</header>
 
 		<section class="section section--work">
-			<h1 class="mb2">My businesses</h1>
+			<h1 class="mb2 normal fs20">My projects</h1>
 			
 			<article class="project">
 				<h1 class="normal"><a href="https://subsail.com" target="_blank">Subsail</a></h1>
-				<p>Easily sell subscriptions and manage your subscribers. Aimed at independent publishers. E-commerce solution and a powerful subscriber management platform.</p>
-				<p class="project__tags fs14"><a href="https://subsail.com" target="_blank">subsail.com</a></p>
+				<p>My SaaS product that makes selling and managing magazine subscriptions easy.</p>
+				<p class="project__tags fs14"><a href="https://subsail.com" target="_blank" class="grey b0">subsail.com ‣</a></p>
 			</article><article class="project">
 				<h1 class="normal"><a href="https://magpile.com" target="_blank">Magpile</a></h1>
-				<p>The wikipedia of magazines and community for magazine fans. Since 2012.</p>
-				<p class="project__tags fs14"><a href="https://magpile.com" target="_blank">magpile.com</a></p>
+				<p>Magpile is a huge user-managed reference to magazines, a 18,000-issue “wikipedia for print.”</p>
+				<p class="project__tags fs14"><a href="https://magpile.com" target="_blank" class="grey b0">magpile.com ‣</a></p>
+			</article><article class="project">
+				<h1 class="normal"><a href="https://magpile.com" target="_blank">kitstory</a></h1>
+				<p>A tool for football fans and shirt collectors to record football kit history and log their own collections.</p>
+				<p class="project__tags fs14"><a href="https://kitstory.co" target="_blank" class="grey b0">kitstory.co ‣</a></p>
 			</article>
 		</section>
 		
-		<section class="section section--interviews mb4">
-			<h1 class="mb2">Interviews</h1>
-
-			<p>Ethos magazine, <a href="https://shop.ethos-magazine.com/products/ethos-magazine-issue-3">issue 3</a></p>
-			<p>Magculture: <a href="https://magculture.com/dan-rowden-subsail/">At work with: Dan Rowden, Subsail</a></p>
-			<p>Musotrees, <a href="https://magpile.com/musotrees/3/">issue 3</a></p>
-			<p>Stack Magazines: <a href="https://www.stackmagazines.com/update/behind-scenes-mag-heroes-podcast/">Behind the scenes: Mag Heroes podcast</a></p>
-			<p>Offscreen, <a href="http://archive.offscreenmag.com/issue9/">issue 9</a></p>
-			<p>InPublishing: <a href="http://www.inpublishing.co.uk/kb/articles/a_golden_age_of_print.aspx">A Golden Age of Print</a></p>
-			<p>Stack Magazines: <a href="https://www.stackmagazines.com/everything/magpile-opens-business/">Magpile opens for business</a></p>
-			<p>Stack Magazines: <a href="https://www.stackmagazines.com/everything/behind-magpile/">The man behind Magpile</a></p>
-
-		</section>
-		
 		<section class="section section--work">
-			<h1 class="mb2">Some of my freelance work and personal projects</h1>
+			<h1 class="mb2 normal grey fs20">Other past work</h1>
 
 			<article class="project">
 				<h1 class="normal"><a href="http://magazinenews.magpile.com" target="_blank">Magazine News</a></h1>
@@ -315,28 +321,28 @@
 				<h1 class="normal">Magpile Awards</h1>
 				<p>Annual awards program for magazines (2012&ndash;2014). Nominations made by Magpile users, with award shortlists judged by industry professionals and experts.</p>
 			</article>
+
+			<p><span class="black">maggly</span> A website builder specific to magazine publishers.</p>
+			<p><span class="black">atthega.me</span>  Location-based social football commentary using Twitter and Gowalla.</p>
+
 		</section>
 		
-		<!--
-		<section class="section section--interviews">
-			<h1 class="mb2">Past projects</h1>
+		<section class="section section--interviews mb4">
+			<h1 class="mb2 normal grey fs20">Interviews</h1>
 
-			<p><span class="black">maggly</span><br>A website builder specific to magazine publishers.</p>
-			<p><span class="black">atthega.me</span><br> Location-based social football commentary using Twitter and Gowalla.</p>
-			<p><span class="black">Football Shirt Archive</span><br>A website recording football/soccer kits throughout history.</p>
-
-		</section>
-		<section class="section section--interviews">
-			<h1 class="mb2">Other things</h1>
-
-			<p><a href="https://instagram.com/dansmags" class="black">@dansmags</a> <small>Instagram</small><br>Photos of my magazines, plus magazine industry commentary.</p>
-			<p><span class="black">Dan's Mags</span> <small>YouTube</small><br>Magazine reviews, news and interviews. Coming soon.</p>
-			<p><a href="https://instagram.com/coffeeinmauritius" class="black">@coffeeinmauritius</a> <small>Instagram</small><br>Promoting the coffee scene in Mauritius.</p>
+			<p>Ethos magazine, <a href="https://shop.ethos-magazine.com/products/ethos-magazine-issue-3">issue 3</a></p>
+			<p>Magculture: <a href="https://magculture.com/dan-rowden-subsail/">At work with: Dan Rowden, Subsail</a></p>
+			<p>Musotrees, <a href="https://magpile.com/musotrees/3/">issue 3</a></p>
+			<p>Stack Magazines: <a href="https://www.stackmagazines.com/update/behind-scenes-mag-heroes-podcast/">Behind the scenes: Mag Heroes podcast</a></p>
+			<p>Offscreen, <a href="http://archive.offscreenmag.com/issue9/">issue 9</a></p>
+			<p>InPublishing: <a href="http://www.inpublishing.co.uk/kb/articles/a_golden_age_of_print.aspx">A Golden Age of Print</a></p>
+			<p>Stack Magazines: <a href="https://www.stackmagazines.com/everything/magpile-opens-business/">Magpile opens for business</a></p>
+			<p>Stack Magazines: <a href="https://www.stackmagazines.com/everything/behind-magpile/">The man behind Magpile</a></p>
 
 		</section>
-	-->
+	
 		<footer class="footer tc fs14">
-			<p class="mb1">Say hi 👋<br><a href="https://twitter.com/dr" title="DM me on Twitter" target="_blank">@dr</a> &middot; <a href="mailto:hello@danrowden.com" title="Email me">E-mail</a></p>
+			<p class="mb1">Say hi<br><a href="https://twitter.com/dr" title="DM me on Twitter" target="_blank" class="b0">@dr</a> &middot; <a href="mailto:hello@danrowden.com" title="Email me" class="b0">E-mail</a></p>
 			<p>Created in Mauritius <script>document.write(new Date().getFullYear())</script></p>
 		</footer>
 
