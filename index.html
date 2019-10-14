@@ -13,7 +13,7 @@
 		}
 
 		body {
-			font-family: 'Inter', 'Roboto', "Helvetica Neue", sans-serif;
+			font-family: 'Inter', "Helvetica Neue", sans-serif;
 			font-size: 16px;
 			line-height: 1.3;
 			color: #111;
@@ -34,6 +34,7 @@
 
 		h1, h2, h3, h4 { line-height: 1.1; }
 		.black { color: #111 !important; }
+		.b { font-weight: bold }
 
 		a:link, 
 		a:visited {
@@ -59,11 +60,11 @@
 		.fs60 { font-size: 60px; }
 		@media (max-width: 767px) {
 			.fs20 { font-size: 16px; }
-			.fs24 { font-size: 20px; }
-			.fs30 { font-size: 20px; }
-			.fs36 { font-size: 24px; }
-			.fs40 { font-size: 30px; }
-			.fs60 { font-size: 40px; }
+			.fs24 { font-size: 19.2px; }
+			.fs30 { font-size: 24px; }
+			.fs36 { font-size: 28.8px; }
+			.fs40 { font-size: 32px; }
+			.fs60 { font-size: 48px; }
 		}
 
 		.grey, a.grey { color: #A2A2A2; }
@@ -89,73 +90,67 @@
 
 		.new { font-size: .7em; opacity: 0.7; text-transform: uppercase; }
 
-		@media (max-width: 599px) {
-			.br-ss { display: block; }
-		}
-
 		.section--header {
 			position: relative;
 			margin-top: 3rem;
-			margin-bottom: 3rem;
+			margin-bottom: 6rem;
 		}
 
-		.name {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 52.5%;
-			padding-left: 10%;
-			text-align: right;
-		}
-		.title {
-			position: absolute;
-			left: 0;
-			top: 120px;
-			width: 53%;
-		}
-		@media (min-width: 600px) {
-			.name {
-				top: 3rem;
-				left: 0;
-				font-size: 2.5rem;
-				text-align: left;
-			}
-			.title {
-				right: 1rem;
-				left: auto;
-			}
-		}
 
-		.photo-container {
-			margin-bottom: 3rem;
-			text-align: right;
-			height: 260px;
-		}
-		@media (min-width: 600px) {
-			.photo-container {
-				text-align: center;
-			}
-		}
 		.photo {
-			width: 50%;
+			width: 100%;
 			z-index: -1;
 		}
-		@media (min-width: 600px) {
-			.photo {
-				max-width: 260px;
+
+		.name, .title {
+			margin-bottom: 0.5rem;
+			z-index: 1;
+		}
+		.name { font-weight: 800; }
+
+		@media (min-width: 450px) {
+			.name {
+				position: absolute;
+				right: 0;
+				top: 60px;
+				text-align: right;
+			}
+			.title {
+				position: absolute;
+				right: 0;
+				top: 120px;
+				text-align: right;
+			}
+
+			.photo-container {
+				position: relative;
+				margin: 0 auto 3rem;
+				height: 260px;
+				max-width: 460px;
+			}
+			@media (min-width: 600px) {
+				.photo-container {
+					text-align: center;
+				}
+			}
+			.photo-col {
+				width: 70%;
 			}
 		}
 
+		@media (max-width: 600px) {
+			.list li { 
+				display: inline;
+			}
+			.list li:not(:last-of-type):after { 
+				content: " · ";
+			}
+		}
 		@media (min-width: 600px) {
 			.lists {
-				max-width: 550px;
-				overflow: hidden;
-				margin: auto;
-			}
-			.list {
-				float: left;
-				width: 50%;
-				margin-bottom: 1rem;
+		    position: absolute;
+		    right: 62px;
+		    bottom: -16px;
 			}
 		}
 
@@ -171,17 +166,25 @@
 		}
 
 		.project {
-			padding: 1rem;
-			vertical-align: top;
+			padding-bottom: 2rem;
 		}
 		.project p { 
-			margin-top: 1rem;
+			margin-top: 0.5rem;
 			line-height: 1.3; 
 		}
+		.project--col p { 
+			margin-top: 1rem;
+		}
 		@media (min-width: 600px) {
-			.project { 
-				width: 50%; 
+			.project--col {
+				width: 50%;
 				display: inline-block;
+				padding: 1rem 0 2rem 1rem;
+				vertical-align: top;
+			}
+			.project--col:nth-of-type(2n+1) {
+				padding-right: 1rem;
+				padding-left: 0;
 			}
 		}
 
@@ -212,6 +215,7 @@
 			}
 		}
 
+		.section--past,
 		.section--interviews {
 			max-width: 550px;
 			margin: 4rem auto 0;
@@ -222,6 +226,8 @@
 
 		.footer {
 			margin: 5rem 0;
+			border-top: 1px solid #eee;
+			padding-top: 5rem;
 		}
 
 
@@ -234,102 +240,108 @@
 		<header class="section section--header flex">
 
 			<div class="photo-container">
-				<img src="images/dan.jpg" alt="Dan Rowden" class="photo">
-				<h1 class="bold name">Dan <span class="br-ss"></span>Rowden</h1>
-				<h2 class="title tr normal fs24">Product builder<br> &amp; entrepreneur</h2>
+				<h1 class="bold name fs36">Dan Rowden</h1>
+				<h2 class="title normal fs24">Product builder<br> &amp; entrepreneur</h2>
+
+				<div class="photo-col">
+					<img src="images/dan.jpg" alt="Dan Rowden" class="photo">
+
+					<div class="mt1 fs14">
+						<a href="https://twitter.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
+						&nbsp;
+						<a href="https://instagram.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dr</a>
+						&nbsp;
+						<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dansmags</a>
+						&nbsp;
+						<a href="https://www.linkedin.com/in/danrowden/" class="b0" target="_blank">
+							<svg class="v-mid" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Desktop" transform="translate(-538.000000, -443.000000)" fill="#A2A2A2" fill-rule="nonzero">
+							            <g id="logo-linkedin" transform="translate(538.000000, 443.000000)">
+							                <path d="M15.3333333,0 L0.666666667,0 C0.266666667,0 0,0.266666667 0,0.666666667 L0,15.3333333 C0,15.7333333 0.266666667,16 0.666666667,16 L15.3333333,16 C15.7333333,16 16,15.7333333 16,15.3333333 L16,0.666666667 C16,0.266666667 15.7333333,0 15.3333333,0 Z M4.73333333,13.6666667 L2.4,13.6666667 L2.4,6 L4.8,6 L4.8,13.6666667 L4.73333333,13.6666667 Z M3.53333333,4.93333333 C2.8,4.93333333 2.13333333,4.33333333 2.13333333,3.53333333 C2.13333333,2.8 2.73333333,2.13333333 3.53333333,2.13333333 C4.26666667,2.13333333 4.93333333,2.73333333 4.93333333,3.53333333 C4.93333333,4.33333333 4.33333333,4.93333333 3.53333333,4.93333333 Z M13.6666667,13.6666667 L11.2666667,13.6666667 L11.2666667,9.93333333 C11.2666667,9.06666667 11.2666667,7.93333333 10.0666667,7.93333333 C8.8,7.93333333 8.66666667,8.86666667 8.66666667,9.86666667 L8.66666667,13.6666667 L6.26666667,13.6666667 L6.26666667,6 L8.53333333,6 L8.53333333,7.06666667 L8.53333333,7.06666667 C8.86666667,6.46666667 9.6,5.86666667 10.8,5.86666667 C13.2,5.86666667 13.6666667,7.46666667 13.6666667,9.53333333 L13.6666667,13.6666667 Z" id="Shape"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a>
+						&nbsp;
+						<a href="https://www.youtube.com/channel/UCWvxwCs9pSGAAni81chXb6w" class="b0" target="_blank">
+							<svg class="v-mid" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							        <g id="Desktop" transform="translate(-565.000000, -445.000000)" fill="#A2A2A2" fill-rule="nonzero">
+							            <g id="logo-youtube" transform="translate(565.000000, 445.000000)">
+							                <path d="M15.8,2.8 C15.6,1.5 15,0.6 13.6,0.4 C11.4,0 8,0 8,0 C8,0 4.6,0 2.4,0.4 C1,0.6 0.3,1.5 0.2,2.8 C0,4.1 0,6 0,6 C0,6 0,7.9 0.2,9.2 C0.4,10.5 1,11.4 2.4,11.6 C4.6,12 8,12 8,12 C8,12 11.4,12 13.6,11.6 C15,11.3 15.6,10.5 15.8,9.2 C16,7.9 16,6 16,6 C16,6 16,4.1 15.8,2.8 Z M6,9 L6,3 L11,6 L6,9 Z" id="Shape"></path>
+							            </g>
+							        </g>
+							    </g>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="lists">
+
+					<ul class="list fs14 grey tl location">
+						<li>English</li>
+						<li>33 yrs</li>
+						<li>Mauritius</li>
+					</ul>
+
+				</div>
 			</div>
 
-			<div class="lists pl1">
-
-				<ul class="list fs14 grey tl location">
-					<li>English</li>
-					<li>32 yrs</li>
-					<li>Mauritius</li>
-				</ul>
-
-				<p class="mt1 fs14">
-					<a href="https://twitter.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
-					&nbsp;
-					<a href="https://instagram.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dr</a>
-					&nbsp;
-					<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dansmags</a>
-					&nbsp;
-					<a href="https://www.linkedin.com/in/danrowden/" class="b0" target="_blank">
-						<svg class="v-mid" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						        <g id="Desktop" transform="translate(-538.000000, -443.000000)" fill="#A2A2A2" fill-rule="nonzero">
-						            <g id="logo-linkedin" transform="translate(538.000000, 443.000000)">
-						                <path d="M15.3333333,0 L0.666666667,0 C0.266666667,0 0,0.266666667 0,0.666666667 L0,15.3333333 C0,15.7333333 0.266666667,16 0.666666667,16 L15.3333333,16 C15.7333333,16 16,15.7333333 16,15.3333333 L16,0.666666667 C16,0.266666667 15.7333333,0 15.3333333,0 Z M4.73333333,13.6666667 L2.4,13.6666667 L2.4,6 L4.8,6 L4.8,13.6666667 L4.73333333,13.6666667 Z M3.53333333,4.93333333 C2.8,4.93333333 2.13333333,4.33333333 2.13333333,3.53333333 C2.13333333,2.8 2.73333333,2.13333333 3.53333333,2.13333333 C4.26666667,2.13333333 4.93333333,2.73333333 4.93333333,3.53333333 C4.93333333,4.33333333 4.33333333,4.93333333 3.53333333,4.93333333 Z M13.6666667,13.6666667 L11.2666667,13.6666667 L11.2666667,9.93333333 C11.2666667,9.06666667 11.2666667,7.93333333 10.0666667,7.93333333 C8.8,7.93333333 8.66666667,8.86666667 8.66666667,9.86666667 L8.66666667,13.6666667 L6.26666667,13.6666667 L6.26666667,6 L8.53333333,6 L8.53333333,7.06666667 L8.53333333,7.06666667 C8.86666667,6.46666667 9.6,5.86666667 10.8,5.86666667 C13.2,5.86666667 13.6666667,7.46666667 13.6666667,9.53333333 L13.6666667,13.6666667 Z" id="Shape"></path>
-						            </g>
-						        </g>
-						    </g>
-						</svg>
-					</a>
-					&nbsp;
-					<a href="https://www.youtube.com/channel/UCWvxwCs9pSGAAni81chXb6w" class="b0" target="_blank">
-						<svg class="v-mid" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						        <g id="Desktop" transform="translate(-565.000000, -445.000000)" fill="#A2A2A2" fill-rule="nonzero">
-						            <g id="logo-youtube" transform="translate(565.000000, 445.000000)">
-						                <path d="M15.8,2.8 C15.6,1.5 15,0.6 13.6,0.4 C11.4,0 8,0 8,0 C8,0 4.6,0 2.4,0.4 C1,0.6 0.3,1.5 0.2,2.8 C0,4.1 0,6 0,6 C0,6 0,7.9 0.2,9.2 C0.4,10.5 1,11.4 2.4,11.6 C4.6,12 8,12 8,12 C8,12 11.4,12 13.6,11.6 C15,11.3 15.6,10.5 15.8,9.2 C16,7.9 16,6 16,6 C16,6 16,4.1 15.8,2.8 Z M6,9 L6,3 L11,6 L6,9 Z" id="Shape"></path>
-						            </g>
-						        </g>
-						    </g>
-						</svg>
-					</a>
-				</p>
-			</div>
 		</header>
 
 		<section class="section section--work">
-			<h1 class="mb2 normal fs20">My projects</h1>
+			<h1 class="mb2 normal grey fs20">My projects</h1>
 			
-			<article class="project">
-				<h1 class="normal"><a href="https://subsail.com" target="_blank">Subsail</a></h1>
+			<article class="project project--col">
+				<h1 class="normal"><a href="https://subsail.com" target="_blank" class="b0" style="margin:6px 0 5px;display: inline-block;"><img src="images/subsail.png" width="127" alt="Subsail"></a></h1>
 				<p>My SaaS product that makes selling and managing magazine subscriptions easy.</p>
-				<p class="project__tags fs14"><a href="https://subsail.com" target="_blank" class="grey b0">subsail.com ‣</a></p>
-			</article><article class="project">
-				<h1 class="normal"><a href="https://magpile.com" target="_blank">Magpile</a></h1>
-				<p>Magpile is a huge user-managed reference to magazines, a 18,000-issue “wikipedia for print.”</p>
-				<p class="project__tags fs14"><a href="https://magpile.com" target="_blank" class="grey b0">magpile.com ‣</a></p>
-			</article><article class="project">
-				<h1 class="normal"><a href="https://magpile.com" target="_blank">kitstory</a></h1>
+				<p class="project__tags fs14"><a href="https://subsail.com" target="_blank" class="grey b0">subsail.com &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://magpile.com" target="_blank" class="b0"><img src="images/magpile.png" width="140" alt="Magpile"></a></h1>
+				<p>Magpile is a huge user-managed reference to magazines, a 18,000-issue "wikipedia for print."</p>
+				<p class="project__tags fs14"><a href="https://magpile.com" target="_blank" class="grey b0">magpile.com &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://magheroes.net" target="_blank" class="b0"><img src="images/magheroes.png" width="142" alt="kitstory"></a></h1>
+				<p>My podcast in which I talk to magazine makers. Since 2013.</p>
+				<p class="project__tags fs14"><a href="https://magheroes.net" target="_blank" class="grey b0">magheroes.net &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://kitstory.co" target="_blank" class="b0" style="margin:12px 0 7px;display: inline-block;"><img src="images/kitstory.png" width="142" alt="kitstory"></a></h1>
 				<p>A tool for football fans and shirt collectors to record football kit history and log their own collections.</p>
-				<p class="project__tags fs14"><a href="https://kitstory.co" target="_blank" class="grey b0">kitstory.co ‣</a></p>
+				<p class="project__tags fs14"><a href="https://kitstory.co" target="_blank" class="grey b0">kitstory.co &rsaquo;</a></p>
 			</article>
 		</section>
 		
-		<section class="section section--work">
+		<section class="section section--past">
 			<h1 class="mb2 normal grey fs20">Other past work</h1>
 
 			<article class="project">
-				<h1 class="normal"><a href="http://magazinenews.magpile.com" target="_blank">Magazine News</a></h1>
-				<p>Simple curation of magazine-related news with upvoting. Built with Flask.</p>
+				<h1><a href="https://stackmagazines.com/subscribe/" target="_blank" class="b0">Stack Magazines subscriptions&nbsp;&rsaquo;</a></h1>
+				<p>I built a custom API-based subscription solution based on Chargebee, Stripe and GoCardless, plus a backend with data processing and syncing with Mailchimp and Newsstand.</p>
 			</article><article class="project">
-				<h1 class="normal"><a href="https://stackmagazines.com" target="_blank">Stack Magazines</a></h1>
-				<p>Development of API-based subscription solution based on Chargebee, Stripe and GoCardless. Backend with data processing and syncing with MailChimp and Newsstand. Built with Django.</p>
+				<h1><a href="https://offscreenmag.com/buy" target="_blank" class="b0">Offscreen Magazine e-commerce&nbsp;&rsaquo;</a></h1>
+				<p>I built Offscreen's bespoke e-commerce and subscription system, powered by a custom API offering payments with PayPal and Stripe, plus a powerful backend system.</p>
 			</article><article class="project">
-				<h1 class="normal"><a href="https://sampler.stackmagazines.com" target="_blank">Sampler</a></h1>
-				<p>Design, development and deployment of weekly magazine deal site, with Stripe payments and a custom backend including MailChimp and Newsstand integrations. Built with Django.</p>
+				<h1>Sampler</h1>
+				<p>I designed and built a weekly magazine deal site for Stack, with Stripe payments and a custom backend including MailChimp and Newsstand integrations.</p>
 			</article><article class="project">
-				<h1 class="normal"><a href="http://magheroes.net" target="_blank">Mag Heroes</a></h1>
-				<p>A podcast I used to host about magazines and the people who make them. Jekyll site, podcast hosted on Simplecast.</p>
+				<h1>Magpile Awards</h1>
+				<p>I ran Magpile's annual awards program for indepedent magazines between 2012 and 2014. Nominations were made by Magpile users, with award shortlists judged by industry professionals and experts.</p>
 			</article><article class="project">
-				<h1 class="normal"><a href="https://offscreenmag.com" target="_blank">Offscreen Magazine</a></h1>
-				<p>Development of e-commerce solution powered by a custom ordering API, with PayPal and Stripe payments. Plus a powerful order and customer backend system. Built with Django.</p>
+				<h1>maggly</h1>
+				<p>A complete website builder platform specifically for magazines. 2013&mdash;2014.</p>
 			</article><article class="project">
-				<h1 class="normal">Magpile Awards</h1>
-				<p>Annual awards program for magazines (2012&ndash;2014). Nominations made by Magpile users, with award shortlists judged by industry professionals and experts.</p>
+				<h1>atthega.me</h1>
+				<p>A location-based social football commentary web app giving fans the chance to send updates from games, using the Twitter and Gowalla APIs.</p>
 			</article>
-
-			<p><span class="black">maggly</span> A website builder specific to magazine publishers.</p>
-			<p><span class="black">atthega.me</span>  Location-based social football commentary using Twitter and Gowalla.</p>
-
 		</section>
 		
 		<section class="section section--interviews mb4">
 			<h1 class="mb2 normal grey fs20">Interviews</h1>
 
+			<p><a href="http://www.conorpurcell.ie/#/new-gallery/">The Magazine Blueprint</a> (book)</p>
 			<p>Ethos magazine, <a href="https://shop.ethos-magazine.com/products/ethos-magazine-issue-3">issue 3</a></p>
 			<p>Magculture: <a href="https://magculture.com/dan-rowden-subsail/">At work with: Dan Rowden, Subsail</a></p>
 			<p>Musotrees, <a href="https://magpile.com/musotrees/3/">issue 3</a></p>
@@ -342,8 +354,9 @@
 		</section>
 	
 		<footer class="footer tc fs14">
-			<p class="mb1">Say hi<br><a href="https://twitter.com/dr" title="DM me on Twitter" target="_blank" class="b0">@dr</a> &middot; <a href="mailto:hello@danrowden.com" title="Email me" class="b0">E-mail</a></p>
-			<p>Created in Mauritius <script>document.write(new Date().getFullYear())</script></p>
+			<p class="mb1">Say hi &middot; <a href="https://twitter.com/dr" title="DM me on Twitter" target="_blank" class="b b0">@dr</a> &middot; <a href="mailto:hello@danrowden.com" title="Email me" class="b b0">E-mail</a></p>
+			<p class="mb1">I am available for hire&mdash;design, development and consultation.</p>
+			<p>Created in 🏝Mauritius <script>document.write(new Date().getFullYear())</script></p>
 		</footer>
 
 		<script>
