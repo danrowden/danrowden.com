@@ -32,7 +32,6 @@
 			}
 		}
 
-		h1, h2, h3, h4 { line-height: 1.1; }
 		.black { color: #111 !important; }
 		.b { font-weight: bold }
 
@@ -67,7 +66,7 @@
 			.fs60 { font-size: 48px; }
 		}
 
-		.grey, a.grey { color: #A2A2A2; }
+		.grey, a.grey { color: #888; }
 
 		.normal { font-weight: normal; }
 		.bold { font-weight: bold; }
@@ -112,7 +111,7 @@
 			.name {
 				position: absolute;
 				right: 0;
-				top: 60px;
+				top: 70px;
 				text-align: right;
 			}
 			.title {
@@ -120,6 +119,7 @@
 				right: 0;
 				top: 120px;
 				text-align: right;
+				max-width: 240px;
 			}
 
 			.photo-container {
@@ -143,10 +143,10 @@
 				display: inline;
 			}
 			.list li:not(:last-of-type):after { 
-				content: " · ";
+				content: " • ";
 			}
 		}
-		@media (min-width: 600px) {
+		@media (min-width: 601px) {
 			.lists {
 		    position: absolute;
 		    right: 62px;
@@ -166,7 +166,7 @@
 		}
 
 		.project {
-			padding-bottom: 2rem;
+			padding-bottom: 3rem;
 		}
 		.project p { 
 			margin-top: 0.5rem;
@@ -230,7 +230,9 @@
 			padding-top: 5rem;
 		}
 
-
+		@media (max-width: 767px) {
+			.hide-small{display: none;}
+		}
 
 		</style>
 	</head>
@@ -241,7 +243,10 @@
 
 			<div class="photo-container">
 				<h1 class="bold name fs36">Dan Rowden</h1>
-				<h2 class="title normal fs24">Product builder<br> &amp; entrepreneur</h2>
+				<div class="title normal fs24">
+					Product builder
+					<div class="fs20" style="margin-top: 6px">Subscriptions, news<span class="hide-small">-<br></span>letters &amp; marketplaces</div>
+				</div>
 
 				<div class="photo-col">
 					<img src="images/dan.jpg" alt="Dan Rowden" class="photo">
@@ -249,14 +254,14 @@
 					<div class="mt1 fs14">
 						<a href="https://twitter.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#a2a2a2"/></svg> dr</a>
 						&nbsp;
-						<a href="https://instagram.com/dr" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dr</a>
+						<a href="https://instagram.com/danrdn" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> danrdn</a>
 						&nbsp;
 						<a href="https://instagram.com/dansmags" class="b0" target="_blank"><svg class="v-mid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><g class="nc-icon-wrapper" fill="#a2a2a2"><path d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z"/><path data-color="color-2" d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/><circle data-color="color-2" cx="18.406" cy="5.594" r="1.44"/></g></svg> dansmags</a>
-						&nbsp;
+						&nbsp;&nbsp;&nbsp;
 						<a href="https://dribbble.com/dr/" class="b0" target="_blank">
 							<svg class="v-mid" width="16" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm2.2 7.4s-.2-.6-.3-.8c1.7-.8 2.8-1.7 3.2-2.2.7.9 1.1 2 1.2 3.2-.8-.2-2.6-.5-4.1-.2zM9.1 5.1C8.3 3.7 7.4 2.5 7 1.8c1.9-.5 3.6.1 4.9 1.3-.4.5-1.2 1.3-2.8 2zm-4-2.6c.4.5 1.2 1.7 2 3.2-2.2.5-4.2.6-5.1.6.4-1.6 1.6-3 3.1-3.8zM8 7.3c.1.2.2.4.3.5-2.8.9-4.6 3.2-5.2 4.1-.8-1.1-1.3-2.4-1.3-3.7.9-.1 3.5-.2 6.2-.9zm1 2.2c.7 2 1.1 3.6 1.2 4.4-2.1.7-4.5.3-5.8-.8.4-.7 1.7-2.5 4.6-3.6zm2.9 3.4c-.2-.8-.5-2.2-1.1-3.9 1.1-.2 2.7 0 3.3.2-.3 1.5-1.1 2.8-2.2 3.7z" fill="#a2a2a2"/></svg>
 						</a>
-						&nbsp;
+						<!-- &nbsp;
 						<a href="https://www.linkedin.com/in/danrowden/" class="b0" target="_blank">
 							<svg class="v-mid" width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -267,9 +272,9 @@
 							        </g>
 							    </g>
 							</svg>
-						</a>
-						&nbsp;
-						<a href="https://www.youtube.com/channel/UCWvxwCs9pSGAAni81chXb6w" class="b0" target="_blank">
+						</a> -->
+						<!-- &nbsp;
+						<a href="https://www.youtube.com/channel/UC_uFIBUo02CCtmTJw6DxuCQ" class="b0" target="_blank">
 							<svg class="v-mid" width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 							    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 							        <g id="Desktop" transform="translate(-565.000000, -445.000000)" fill="#A2A2A2" fill-rule="nonzero">
@@ -279,7 +284,7 @@
 							        </g>
 							    </g>
 							</svg>
-						</a>
+						</a> -->
 					</div>
 				</div>
 
@@ -297,27 +302,49 @@
 		</header>
 
 		<section class="section section--work">
-			<h1 class="mb2 normal grey fs20">My projects</h1>
+			<h1 class="mb1 mt2 normal grey fs20">My projects</h1>
 			
 			<article class="project project--col">
+				<h1 class="normal"><a href="https://cove.chat" target="_blank" class="b0" style="margin:6px 0 5px;display: inline-block;"><img src="images/cove.png" width="150" alt="Cove"></a></h1>
+				<p>A commenting and community platform for Ghost blogs, built on top of memberships.</p>
+				<p class="project__tags fs14"><a href="https://cove.chat" target="_blank" class="grey b0">cove.chat &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://toolsforghost.com" target="_blank" class="b0" style="margin:19px 0 5px;display: inline-block;"><img src="images/toolsforghost.png" width="200" alt="Cove"></a></h1>
+				<p>A directory of the best hosting and add-ons for Ghost publications.</p>
+				<p class="project__tags fs14"><a href="https://toolsforghost.com" target="_blank" class="grey b0">toolsforghost.com &rsaquo;</a></p>
+			</article><article class="project project--col">
 				<h1 class="normal"><a href="https://subsail.com" target="_blank" class="b0" style="margin:6px 0 5px;display: inline-block;"><img src="images/subsail.png" width="127" alt="Subsail"></a></h1>
-				<p>My SaaS product that makes selling and managing magazine subscriptions easy.</p>
+				<p>My SaaS product that makes selling and managing magazine subscriptions easy, powering $1.8m in sales so far.</p>
 				<p class="project__tags fs14"><a href="https://subsail.com" target="_blank" class="grey b0">subsail.com &rsaquo;</a></p>
 			</article><article class="project project--col">
-				<h1 class="normal"><a href="https://magpile.com" target="_blank" class="b0"><img src="images/magpile.png" width="140" alt="Magpile"></a></h1>
-				<p>Magpile is a huge user-managed reference to magazines, a 18,000-issue "wikipedia for print."</p>
+				<h1 class="normal"><a href="https://kitstory.co" target="_blank" class="b0" style="margin:7px 0 -1px;display: inline-block;"><img src="images/kitstory.png" width="142" alt="kitstory"></a></h1>
+				<p>A tool for football fans and collectors to record football shirt history and log their own collections.</p>
+				<p class="project__tags fs14"><a href="https://kitstory.co" target="_blank" class="grey b0">kitstory.co &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://magpile.com" target="_blank" class="b0" style="margin:9px 0 3px;display: inline-block;"><img src="images/magpile.png" width="140" alt="Magpile"></a></h1>
+				<p>Magpile is a huge user-managed reference to more than 20,000 magazines and issues.</p>
 				<p class="project__tags fs14"><a href="https://magpile.com" target="_blank" class="grey b0">magpile.com &rsaquo;</a></p>
 			</article><article class="project project--col">
 				<h1 class="normal"><a href="https://magheroes.net" target="_blank" class="b0"><img src="images/magheroes.png" width="142" alt="kitstory"></a></h1>
-				<p>My podcast in which I talk to magazine makers. Since 2013.</p>
+				<p>My podcast in which I talk to magazine makers. Four seasons since 2013.</p>
 				<p class="project__tags fs14"><a href="https://magheroes.net" target="_blank" class="grey b0">magheroes.net &rsaquo;</a></p>
-			</article><article class="project project--col">
-				<h1 class="normal"><a href="https://kitstory.co" target="_blank" class="b0" style="margin:12px 0 7px;display: inline-block;"><img src="images/kitstory.png" width="142" alt="kitstory"></a></h1>
-				<p>A tool for football fans and shirt collectors to record football kit history and log their own collections.</p>
-				<p class="project__tags fs14"><a href="https://kitstory.co" target="_blank" class="grey b0">kitstory.co &rsaquo;</a></p>
 			</article>
 		</section>
-		
+<!-- 
+		<section class="section section--work">
+			<h1 class="mb1 mt2 normal grey fs20">My blogs</h1>
+			
+			<article class="project project--col">
+				<h1 class="normal"><a href="https://makeandgraft.com" target="_blank" class="b0" style="margin:4px 0 2px;display: inline-block;"><img src="images/makeandgraft.png" width="190" alt="Make & Graft"></a></h1>
+				<p>I write about working online, side projects, remote work and staying healthy at your desk.</p>
+				<p class="project__tags fs14"><a href="https://makeandgraft.com" target="_blank" class="grey b0">makeandgraft.com &rsaquo;</a></p>
+			</article><article class="project project--col">
+				<h1 class="normal"><a href="https://teedrop.co" target="_blank" class="b0"><img src="images/teedrop.png" width="150" alt="Tee Drop"></a></h1>
+				<p>A blog reviewing t-shirt launches and highlighting sustainable brands.</p>
+				<p class="project__tags fs14"><a href="https://teedrop.co" target="_blank" class="grey b0">teedrop.co &rsaquo;</a></p>
+			</article>
+		</section>
+		 -->
 		<section class="section section--past">
 			<h1 class="mb2 normal grey fs20">Other past work</h1>
 
@@ -329,7 +356,7 @@
 				<p>I built Offscreen's bespoke e-commerce and subscription system, powered by a custom API offering payments with PayPal and Stripe, plus a powerful backend system.</p>
 			</article><article class="project">
 				<h1>Sampler</h1>
-				<p>I designed and built a weekly magazine deal site for Stack, with Stripe payments and a custom backend including MailChimp and Newsstand integrations.</p>
+				<p>I designed and built a weekly magazine deal site for Stack, with Stripe payments and a custom backend including Mailchimp and Newsstand integrations.</p>
 			</article><article class="project">
 				<h1>Magpile Awards</h1>
 				<p>I ran Magpile's annual awards program for indepedent magazines between 2012 and 2014. Nominations were made by Magpile users, with award shortlists judged by industry professionals and experts.</p>
@@ -358,21 +385,26 @@
 		</section>
 	
 		<footer class="footer tc fs14">
-			<p class="mb1">Say hi &middot; <a href="https://twitter.com/dr" title="DM me on Twitter" target="_blank" class="b b0">@dr</a> &middot; <a href="mailto:hello@danrowden.com" title="Email me" class="b b0">E-mail</a></p>
-			<p class="mb1">I am available for hire&mdash;design, development and consultation.</p>
-			<p>Created in 🏝Mauritius <script>document.write(new Date().getFullYear())</script></p>
+			<p class="mb1"><a href="https://twitter.com/messages/compose?recipient_id=5264" title="DM me" class="b0" style="padding: 6px 3px 6px 6px; background-color: #f3f3f3">Say hi on Twitter DM! @dr</a></p>
+			<p class="mb1">I am available for hire: design, development and consultation.</p>
+			<p>Created in Mauritius <script>document.write(new Date().getFullYear())</script></p>
 		</footer>
 
+		<!-- Fathom - simple website analytics - https://usefathom.com -->
 		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-		  ga('create', 'UA-74610928-1', 'auto');
-		  ga('send', 'pageview');
-
+		(function(f, a, t, h, o, m){
+		a[h]=a[h]||function(){
+		(a[h].q=a[h].q||[]).push(arguments)
+		};
+		o=f.createElement('script'),
+		m=f.getElementsByTagName('script')[0];
+		o.async=1; o.src=t; o.id='fathom-script';
+		m.parentNode.insertBefore(o,m)
+		})(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
+		fathom('set', 'siteId', 'IMYHCRTX');
+		fathom('trackPageview');
 		</script>
+		<!-- / Fathom -->
 	</body>
 
 </html>
